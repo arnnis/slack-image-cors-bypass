@@ -3,8 +3,8 @@ const express = require("express");
 
 const app = express();
 
-app.get("/url/:url", (req, res) => {
-  const url = req.params.url;
+app.get("/url", (req, res) => {
+  const url = req.query.url;
   const token = req.query.t;
   fetch(url, { headers: { Authorization: token } })
     .then((r) => r.blob())
