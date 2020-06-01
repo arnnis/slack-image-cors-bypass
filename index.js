@@ -12,6 +12,6 @@ app.get("/url/:url", (req, res) => {
     .catch((err) => res.send("Error loading image"));
 });
 
-app.listen(80, () => {
+app.listen(8080, () => {
   console.log("Server listening");
 });
