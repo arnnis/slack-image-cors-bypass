@@ -9,7 +9,7 @@ app.get("/url", (req, res) => {
   fetch(url, { headers: { Authorization: token } })
     .then((r) => r.blob())
     .then((result) => res.sendFile(result))
-    .catch((err) => res.send("Error loading image"));
+    .catch((err) => res.send("Error loading image", err));
 });
 
 app.listen(process.env.PORT || 80, () => {
